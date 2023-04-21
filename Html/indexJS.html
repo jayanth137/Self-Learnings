@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dialog Box Example</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<button id="myButton" onclick="myFunction()">Click me!</button>
+
+	<div id="myModal" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<p>This is a dialog box!</p>
+		</div>
+	</div>
+
+	<script >
+// Get the button element
+function myFunction() {
+  alert("I am an alert box!");
+}
+const myButton = document.getElementById("myButton");
+
+// Add a click event listener to the button
+myButton.addEventListener("click", function() {
+  // Create an alert box
+  const alertBox = document.createElement("div");
+  alertBox.classList.add("alert");
+  alertBox.textContent = "Hello, world!";
+  document.body.appendChild(alertBox);
+});
+
+
+    </script>
+</body>
+</html>
